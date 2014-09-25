@@ -4,6 +4,7 @@ public class Node {
 	Node left;
 	Node right;
 	Node nextRight;
+	Node nextNode;
 	Node(){
 		
 	}
@@ -12,4 +13,13 @@ public class Node {
 		left = leNode;
 		right = riNode;
 	}
+	Node(int a){
+		data = a;
+	}
+	Node add(Node b){
+		this.nextNode = b;
+		b.nextNode = null;
+		return b;		
+	}
+	
 }
